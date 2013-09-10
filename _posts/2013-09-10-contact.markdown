@@ -1,0 +1,13 @@
+---
+  layout: post
+  title: "Contact"
+  permalink: /contact
+---
+
+__E-mail:__ [anton@antonfagerberg.com](mailto:anton@antonfagerberg.com)
+
+__GitHub:__ [github.com/AntonFagerberg](https://github.com/AntonFagerberg)
+
+__Twitter:__ [twitter.com/AntonFagerberg](https://twitter.com/AntonFagerberg)
+
+__Instagram:__ [instagram.com/AntonFagerberg](https://instagram.com/AntonFagerberg)

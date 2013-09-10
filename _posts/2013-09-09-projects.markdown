@@ -1,0 +1,10 @@
+---
+  layout: category
+  title: "Projects"
+  permalink: /projects
+  categories: projects
+---
+
+This is a selection of some of the hobby projects I've created in the past. You can only find a few of the things i create on this page. For more things which I've created, check out my <a href="https://github.com/AntonFagerberg">GitHub profile</a>. 
+
+{{ content }}
