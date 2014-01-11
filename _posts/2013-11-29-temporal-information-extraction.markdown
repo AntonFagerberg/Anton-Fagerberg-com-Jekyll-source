@@ -6,7 +6,7 @@
 
 This project uses mainly regular expressions with some additional tweaking functions to extract temporal information (dates, durations, time, etc) from news articles or any other text.
 
-Everything here should be viewed as a proof on concept. To code is not pretty and it is only targeted against the SemEval-2010 conference competition and not to be used in a real product.
+Everything here should be viewed as a proof on concept. To code is not pretty and it is only targeted against the TempEval-2 Task A of the SemEval-2010 conference competition and not to be used in a real product.
 
 ![screenshot](/images/projects/temporal.png)
 
@@ -53,6 +53,9 @@ attribute value      0.88
 ```
 
 Due to time constraints, I decided to quit when reaching 50% - but I believe that this could be greatly improved if I had more time to work on it. This is only a proof of concept but my belief is that this could work very good given enough time and dedication.
+### Paper
+[Paper about this project](/files/tempex_anton_fagerberg.pdf)
+
 ### Source code
 
 [github.com/AntonFagerberg/Temporal-Information-Extraction](https://github.com/AntonFagerberg/Temporal-Information-Extraction)

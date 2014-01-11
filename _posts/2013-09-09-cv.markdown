@@ -37,7 +37,7 @@ Terminalkommunikation- och planeringsverktyg, truck-PC användargränssnitt.<br 
 [Uppmärksammades i branchtidningen Intelligent Logistik, nr 4, 2009, s. 37](/files/intelligent_logistik.pdf).
 
 ###RK
-Returhanteringssystem, faktureringsunderlag, 8 år i drift, ~2 miljoner returer.<br />
+Returhanteringssystem, faktureringsunderlag, 9 år i drift, ~2 miljoner returer.<br />
 <i>PHP, MySQL, JavaScript, HTML, CSS.</i>
 
 ##Utbildning
