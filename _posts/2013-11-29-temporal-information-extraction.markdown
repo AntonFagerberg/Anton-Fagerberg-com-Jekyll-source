@@ -52,7 +52,7 @@ attribute type       0.97
 attribute value      0.88
 ```
 
-Due to time constraints, I decided to quit when reaching 50% - but I believe that this could be greatly improved if I had more time to work on it. This is only a proof of concept but my belief is that this could work very good given enough time and dedication.
+Due to time constraints, I decided to quit when reaching 50% in the training set - but I believe that this could be greatly improved if I had more time to work on it. This is only a proof of concept but my belief is that this could work very good given enough time and dedication.
 ### Paper
 [Paper about this project](/files/tempex_anton_fagerberg.pdf)
 

@@ -4,11 +4,12 @@
   permalink: /cv
 ---
 
-[Ladda ner PDF](/files/Anton_Fagerberg_CV.pdf)
-
 ##Arbetslivserfarenhet
+###Jayway Syd AB
+<b>Java Backend (2014 - pågående)</b><br />
+
 ###Bring Norden AB
-<b>IT Production Specialist  (2013)</b><br />
+<b>IT Production Specialist  (2013 - 2014)</b><br />
 Systemutveckling, projektledning.<br />
 <i>Scala, MySQL, Play! Framework, Akka, JavaScript, jQuery.</i>
 
@@ -44,6 +45,10 @@ Returhanteringssystem, faktureringsunderlag, 9 år i drift, ~2 miljoner returer.
 ###Civilingenjör i datateknik
 <b>Specialisering programvara (2010 - 2015)</b><br />
 Pågående utbildning på Lunds Universitet, Lunds Tekniska högskola. Masternivå, 300 hp.
+###Principles of Reactive Programming
+<b>Coursera kurs av Dr. Martin Odersky, Erik Meijer, Roland Kuhn (2013)</b><br />
+Reactive programmering i Scala. 7 veckor.<br />
+[Coursera kurssida](http://www.coursera.org/course/reactive)
 ###Functional Programming Principles in Scala
 <b>Coursera kurs av Dr. Martin Odersky (2012)</b><br />
 Funktionell programmering i Scala. 7 veckor.<br />
