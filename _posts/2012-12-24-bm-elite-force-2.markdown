@@ -4,7 +4,7 @@
   categories: projects
 ---
 
-<iframe src="http://player.vimeo.com/video/56785260?title=0&amp;byline=0&amp;portrait=0&amp;color=c9ff23" width="656" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="//player.vimeo.com/video/56785260?portrait=0&amp;color=c9ff23" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 This is the second game in the BM Elite Force series (not much related to each other). BM Elite Force 2 has been my autumn/winter project of 2012. I started this "tradition" in 2011 where I create a new game in a new (for me) language every year and release it around christmas dedicated to my good old friends when we meet up. This year the game was written in Scala using the Java library Slick 2D (built on LWJGL).
 
@@ -29,7 +29,7 @@ This game is meant to be played with and __Xbox 360 controller__. You really sho
  * Toggle health: Right Shift
 
 ## Bugs
-There are some bugs which I know of but I'm not currently not trying to fix them. Feel free to submit a pull request if you wish. :)
+There are some bugs which I know of but I'm not currently not trying to fix them. Feel free to submit a pull request if you wish.
 
 ### Linux
 Fullscreen mode and sound doesn't work in Ubuntu 12.10 as far as I can tell?
@@ -57,6 +57,7 @@ This was the previous game which I coded in Ruby with LibGosu.
 GNU General Public License, version 2
 
 ## Music (CC BY-NC-SA 3.0)
+
 ### Jimmypig
 [XS & GS - Game Over](http://www.newgrounds.com/audio/listen/469781)
 
@@ -81,6 +82,7 @@ GNU General Public License, version 2
 [The Most Inspiring Song Ever](http://www.newgrounds.com/audio/listen/38773)
 
 ## Graphics (CC BY-SA 3.0 / GPL 2.0 / GPL 3.0)
+
 ### Surt
 [opengameart.org/content/shmup-ships](http://opengameart.org/content/shmup-ships)
 

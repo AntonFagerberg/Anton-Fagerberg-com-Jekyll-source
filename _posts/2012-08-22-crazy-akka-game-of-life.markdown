@@ -10,8 +10,7 @@ As the title says, this is a crazy implementation of Conway's Game of Life using
  * Use lots of Futures.
  * Avoid using matrix look-ups for calculating cell neighbours.
  * Not be practical or pragmatic.
- * Achieve good performance (if I had access to a super computer).
- * (Written before I had any good knowledge about Akka).
+ * (Written before I had any good knowledge about Akka so the design is terrible).
 
 ## How does it work?
 First off, we have the World which is the main supervisor Actor. It will create one cell Actor for each cell and one Checker Actor for each Cell.
@@ -38,9 +37,9 @@ I had a go with a grid of 120x75 which results in 18,001 Actors and it worked fi
 ## Running it
 Use SBT:
 
-```bash
+{% highlight bash %}
 sbt run
-```
+{% endhighlight %}
 
 Change src/main/scala/Main.scala to adjust the number of rows & columns (default is 10x10). You can also change src/main/resources/Application.conf to adjust the Akka settings with number of threads etc. Note that this is also limited by the JVM and your operating system.
 
@@ -50,4 +49,4 @@ Change src/main/scala/Main.scala to adjust the number of rows & columns (default
  I know, I made the whole GUI / Akka interaction a hack and there are probably a lot of things wrong with it - especially with threads.
 
 ## Code
- More information & code on [GitHub](https://github.com/AntonFagerberg/Crazy-Akka-Game-of-Life). 
+ More information & code on [GitHub](https://github.com/AntonFagerberg/Crazy-Akka-Game-of-Life).

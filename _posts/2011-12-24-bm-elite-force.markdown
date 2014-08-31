@@ -4,7 +4,7 @@
   categories: projects
 ---
 
-<iframe src="http://player.vimeo.com/video/37264636?title=0&amp;byline=0&amp;portrait=0" width="656" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="//player.vimeo.com/video/37264636?portrait=0&amp;color=c9ff23" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 So the background story goes like this. Me and my friends had this "gaming club" back in the days called Button Masters. We used to meet every thursday, eat some pizza and drink some brews and of course play games together. We started out with the GameCube where we played a lot of Super Smash Bros but lately (since the Xbox 360 arrived) we've mostly been playing Halo 3. Nowadays we all pretend to be grown up, some of us has moved to new cities (and countries) but we try to meet up at least for christmas and have our own ButtonMasters-christmas (we sometime call it Dinosaurmas since none of us is religious).
 

@@ -1,18 +1,16 @@
 ---
-  layout: default
+layout: default
 ---
-
-<div class="description">
+<div id="categoryDescription">
 	{{ content }}
 </div>
 
 {% for post in site.posts %}
 	{% if post.categories == page.categories and post.id != page.id %}
-		<div class="item" onclick="location.href='{{ post.url }}'" style="cursor: pointer;">
-			<h2>{{ post.title }}</h2>
+		<div class="post description" onclick="location.href='{{ post.url }}'" style="cursor: pointer;">
+			<h1>{{ post.title }}</h1>
 			<p>{{ post.excerpt }}</p>
-			<a href="{{ post.url }}">Read more</a><br />
-			<!--<span class="notice">{{ post.date | date_to_string }}</span>-->
+			<a style="font-weight: bold;" href="{{ post.url }}">Read more</a><br />
 		</div>
 	{% endif %}
 {% endfor %}

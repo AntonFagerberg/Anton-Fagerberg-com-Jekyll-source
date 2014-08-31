@@ -257,7 +257,7 @@ This is my configuration which I&#8217;ve stoled from the link below:
 /set awl_display_key $Q%K|%n$H$C$S
 {% endhighlight %}
 
-Download: [anti.teamidiot.de/static/nei/*/Code/Irssi/adv\_windowlist.pl](http://anti.teamidiot.de/static/nei/*/Code/Irssi/adv_windowlist.pl)
+Download: [anti.teamidiot.de/static/nei/\*/Code/Irssi/adv\_windowlist.pl](http://anti.teamidiot.de/static/nei/*/Code/Irssi/adv_windowlist.pl)
 
 More info: [quadpoint.org/articles/irssi#channel\_statusbar\_using\_advanced\_windowlist](http://quadpoint.org/articles/irssi#channel_statusbar_using_advanced_windowlist)
 

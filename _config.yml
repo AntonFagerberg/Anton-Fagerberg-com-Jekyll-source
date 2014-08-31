@@ -1,4 +1,11 @@
-name: Anton Fagerberg
-markdown: redcarpet
-pygments: true
+# Site settings
+title: Anton Fagerberg
+email: anton@antonfagerberg.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.antonfagerberg.com" # the base hostname & protocol for your site
+twitter_username: antonfagerberg
+
+# Build settings
+markdown: kramdown
 permalink: /:categories/:title/
+highlighter: pygments

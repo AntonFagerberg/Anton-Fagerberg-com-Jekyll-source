@@ -8,7 +8,7 @@ This project is inspired by RSSDler ([code.google.com/p/rssdler](https://code.go
 The only thing this application does is that it downloads files linked in RSS (XML) feeds if the titles are matched against some regular expression.
 
 ### Example configuration
-```bash
+{% highlight bash %}
 # Names of all enabled feeds.
 names = [ "coolfeeds", "hotfeeds" ]
 
@@ -31,41 +31,44 @@ hotfeeds.scanTime = 5
 hotfeeds.regexTrue = "(KittyNews S\\d{2}E\\d{2}|DogTimes Season [1-5])"
 hotfeeds.regexFalse = "Fluffy"
 hotfeeds.saveFolder = "/my/hot/stuff"
-```
+{% endhighlight %}
 
 ### Build
 To build a "fat" self-contained executable, use the SBT assembly provided in this project.
 
-```bash
+{% highlight bash %}
 sbt assembly
-```
+{% endhighlight %}
 
 This will generate a self-contained JAR-file, see command output for the location where it is saved.
 
 ### Run
 If assembly has been used to create the JAR-file, you can execute the file with either Java or Scala:
 
-```bash
+{% highlight bash %}
 scala dlerss.jar
-```
+{% endhighlight %}
 
-```bash
+{% highlight bash %}
 java -jar dlerss.jar
-```
+{% endhighlight %}
 
 By default, dlerss will look for a configuration file in the current directory called "application.conf". To specify another configuration file, simply specify it as the first argument:
 
-```bash
+{% highlight bash %}
 scala Dlerss.jar ../folder/bad-ass.conf
-```
+{% endhighlight %}
 
 ### Dependencies
-```bash
+{% highlight bash %}
 "com.typesafe" % "config" % "1.0.2"
-```
+{% endhighlight %}
 
 ### Regular Expressions
-This is a good site to learn more: [tutorialspoint.com/scala/scala_regular_expressions.htm](http://www.tutorialspoint.com/scala/scala_regular_expressions.htm)
+This is a good site to learn more:
+
+[tutorialspoint.com/scala/scala_regular_expressions.htm](http://www.tutorialspoint.com/scala/scala_regular_expressions.htm)
+
 Note that to match for example digits, you have to use \\\\d with double back slashes to not mess up the string in the configuration file.
 
 ### Source code

@@ -8,9 +8,10 @@ This is an Scala implementation of the Instagram API.
 
 This project uses scalaj-http to send HTTP-requests and lift-json to parse the JSON response to case classes.
 
-You need to register an application for Instagram and get a client id (and later an access token for full access) before you can use this API. First register on: http://instagram.com/developer to get the required client id and secret - then use this API to receive an access token.
+You need to register an application for Instagram and get a client id (and later an access token for full access) before you can use this API. First register on: [instagram.com/developer](http://instagram.com/developer) to get the required client id and secret - then use this API to receive an access token.
 
 A Response object is returned from all methods and it contains:
+
  * Data - the stuff you actually want. This is the JSON response parsed to a corresponding object.
  * Pagination - if a large result set is retrieved, this object contains what you need to fetch the next "batch" of information. You can pass the relevant pieces of this information to the same method as called before as optional parameters.
  * Meta - contains the status from Instagram (like 200 OK, 400 error). Internal errors such as parsing or socket errors will be stored in this meta object as well.
@@ -42,6 +43,7 @@ To create a Jar-file. However, you need to add the dependencies below to your pr
 ## Implementation status
 
 ### Implemented
+ * Images and Videos.
  * Get basic information about a user.
  * Search for a user by name.
  * Get information about a media object.
@@ -91,7 +93,7 @@ println(Authenticator.tokenURL(clientId, redirectURI))
 // Server-side (Explicit) Flow
 // Step 1: Get a URL to call. This URL will return the CODE to use in step 2 in the URI as a parameter code.
 println(Authenticator.codeURL(clientId, redirectURI))
-// You can append scopes by doing println(Authenticator.codeURL(clientId, redirectURI, comments = true, relationships = true, likes = true))    
+// You can append scopes by doing println(Authenticator.codeURL(clientId, redirectURI, comments = true, relationships = true, likes = true))
 // Step 2: Request a token for the code requested in step 1 (the code is valid one time only).
 // This will return Either a Authentication object with access token and user information or a Meta object on failure.
 println(Authenticator.requestToken(clientId, clientSecret, redirectURI, code = "the-code-from-step-1"))

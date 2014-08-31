@@ -1,0 +1,124 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+
+$rotation: -7deg;
+
+body {
+  margin: 0;
+  background-color: #f7f5f1;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid #4094aa;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#gradient {
+	background: url('../images/gradient.png');
+	background-position: center;
+	height:10px;
+}
+
+$margin: 55px;
+
+#logo {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+
+  a {
+    font-size: 100px;
+    line-height: 64px;
+    color: #7400a4;
+  }
+
+  a:hover {
+    border: 0;
+    color: #4094aa;
+    cursor: pointer;
+  }
+
+  padding-bottom: 26px;
+  width: 700px;
+  margin: $margin auto;
+
+  -webkit-transform: rotate($rotation);
+  -moz-transform: rotate($rotation);
+  -ms-transform: rotate($rotation);
+  -o-transform: rotate($rotation);
+  transform: rotate($rotation);
+}
+
+#menu {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.grayBar {
+  color: #ccc;
+  padding: 0 10px;
+}
+
+.post, #categoryDescription {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0 20px;
+
+  a {
+    border-bottom: 2px solid #4094aa;
+  }
+}
+
+#categoryDescription {
+  font-style: italic;
+  border-left: 3px solid #f0978b;
+  margin: $margin auto;
+}
+
+.post {
+  line-height: 1.6em;
+  border-left: 3px solid #f9d28b;
+  margin-bottom: $margin;
+
+  img {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+
+.description:hover {
+  border-left: 3px solid #4094aa;
+}
+
+.post.full {
+  margin-top: $margin;
+}
+
+@import "syntax-highlighting";

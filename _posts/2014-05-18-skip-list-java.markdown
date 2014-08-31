@@ -4,7 +4,7 @@
   categories: projects
 ---
 
-The skip list is a interesting probabilistic data structure which and can be an alternative to trees. Here I've completed a simple implementation in Java using generics. The items in the skip list are actually key-value pairs and therefore works as a map.
+The skip list is a interesting probabilistic data structure which can be an alternative to trees. Below is a simple implementation in Java using generics to store key-value pairs and therefore works as a map.
 
 Code available on my [GitHub page](https://github.com/AntonFagerberg/SkipList-Map-Java).
 
