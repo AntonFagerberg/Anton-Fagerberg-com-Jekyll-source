@@ -1,0 +1,8 @@
+---
+  layout: post
+  title: "1Q84"
+  categories: favorites
+---
+
+![1Q84](/images/recommended/1q84.jpg)
+[The book on Wikipedia](http://en.wikipedia.org/wiki/1Q84)
