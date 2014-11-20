@@ -71,7 +71,6 @@ $margin: 55px;
   transform: rotate($rotation);
 }
 
-
 #menu {
   text-align: center;
   font-family: 'Playfair Display', serif;
@@ -120,6 +119,19 @@ $margin: 55px;
 
 .post.full {
   margin-top: $margin;
+}
+
+@media screen and (max-width: 700px) {
+  #logo {
+    width: 100vw;
+    a {
+      font-size: 14vw;
+    }
+  }
+  
+  #menu {
+    font-size: 4.5vw;
+  }
 }
 
 @import "syntax-highlighting";

@@ -9,7 +9,7 @@
 ### Jayway Syd AB
 
 <b>Konsult (2014 - pågående)</b><br />
-<i>Javascript, Scala, Play! Framework, Akka, MySQL, Backbone.js, AngularJS, jQuery.</i><br />
+<i>Javascript, Scala, Play! Framework, Akka, MySQL, Backbone.js, jQuery.</i><br />
 
 ### Bring Norden AB
 <b>IT Production Specialist  (2013 - 2014)</b><br />

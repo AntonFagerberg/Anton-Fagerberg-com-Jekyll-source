@@ -1,1 +1,3 @@
 _site
+.sass_cache/*
+.sass-cache/fd814f5cac8348f24196a21347491891ef11bc0a/_syntax-highlighting.scssc
