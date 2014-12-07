@@ -1,0 +1,10 @@
+---
+  layout: category
+  title: "Texts"
+  permalink: /texts
+  categories: texts
+---
+
+At the moment, this page only contain some texts I wrote for some old blogs. I've decided to keep them here since they still seem to generate quite a lot of traffic has been appreciated by the readers.
+
+{{ content }}

@@ -4,7 +4,7 @@
   categories: projects
 ---
 
-SweetSpots is an app I developed to learn how to use the Android SDK (target API-level 17 and above). I never released it on Google Play, I did however find it useful for my own needs. Below is a fictive sales pitch I wrote:
+SweetSpots was an app I developed to learn how to use the Android SDK (target API-level 17 and above). I never released it on Google Play, I did however find it useful for my own needs. Below is a fictive sales pitch I wrote:
 
 >"The SweetSpots app lets you save your newly discovered favourite places in the world. It is perfect for when you found a place which you would like to remember and return to at some time in the future. Found an exceptional spot when picking mushrooms in the woods and want to return to it the next season? Save a SweetSpot and easily find it again using your favourite map software!
 

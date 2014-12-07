@@ -9,3 +9,5 @@ twitter_username: antonfagerberg
 markdown: kramdown
 permalink: /:categories/:title/
 highlighter: pygments
+
+gems: [jekyll_github_sample]

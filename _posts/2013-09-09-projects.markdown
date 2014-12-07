@@ -5,6 +5,6 @@
   categories: projects
 ---
 
-This is a selection of some of the hobby projects which I've created in the past. You can only find a few of the things I've created on this page - for more stuff, check out my <a href="https://github.com/AntonFagerberg">GitHub profile</a>.
+This is a selection of some of the hobby &amp; professional projects which I've created. If you want to see more projects, check out my <a href="https://github.com/AntonFagerberg">GitHub profile</a>.
 
 {{ content }}

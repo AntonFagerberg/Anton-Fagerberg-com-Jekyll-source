@@ -14,7 +14,7 @@ The code was evaluated against SemEval-2010.
 
 ### Test set:
 
-{% highlight bash %}
+{% highlight text %}
 true positives:   165
 true negatives:   9336
 false positives:  8
@@ -34,7 +34,7 @@ attribute value      0.88
 
 ### Training set:
 
-{% highlight bash %}
+{% highlight text %}
 true positives:   1053
 true negatives:   51246
 false positives:  87
