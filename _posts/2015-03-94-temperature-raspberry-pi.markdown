@@ -1,0 +1,102 @@
+---
+layout: post
+title: "Temperature station on a Raspberry Pi"
+categories: projects
+---
+
+To begin with, I did a clean install of [Raspbian based on Debian Wheezy](http://raspbian.org/). I'm running it without a graphical user interface, no overclocking but I have reduced the GPU memory to 16 megabytes.
+
+## Hardware
+I won't describe how the sensors are put together because there are many guides already. I would recommend [this guide from adafruit](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf) which I've followed. I used two waterproof DS18B20 sensors connected in parallel with one 4.7kΩ resistor. 
+
+Note that there is one change which has to be made to Raspbian in order to read the sensor data which I'll describe below:
+
+## Reading the sensors
+I seems like there has been a change in Raspbian lately which requires a minor change before the sensors can be read. If you've followed the guide I linked above from adafruit, then you want to add the following line to the file /boot/config.txt:
+
+{% highlight text %}
+dtoverlay=w1-gpio-pullup,gpiopin=x,pullup=y
+{% endhighlight %}
+
+You can read more on the [Raspberry Pi forum](http://www.raspberrypi.org/forums/viewtopic.php?f=28&t=97314) about what these settings actually mean and how they can be changed whether you have a pull-up pin and so on.
+
+Now you should reboot Raspbian. After that, you should look in the path /sys/bus/w1/devices.
+
+{% highlight text %}
+visa ls
+{% endhighlight %}
+
+Everyone of your sensors will have its own folder starting with "28-". As you can se above, I have two sensors. In each of the folders are a file called w1_slave which you can read to see the actual sensor data.
+
+{% highlight text %}
+pi@raspberrypi ~ $ cat /sys/bus/w1/devices/28-0314564e82ff/w1_slave
+61 01 55 00 7f ff 0c 10 6a : crc=6a YES
+61 01 55 00 7f ff 0c 10 6a t=22062
+{% endhighlight %}
+
+On the first line, you can see that it ends with YES, which indicates that we successfully got a value. On the second line, you'll see t=22062 in my case. This is the temperature in 1/1000 degree celsius, so that would be 22.062 degrees celsius. Note that the precision isn't that accurate, for the sensors I bought, they are actually only precise up to +-0.5 degrees even though they look more precis from the readout.
+
+## Let's go temp_log!
+Alright, now we're ready to start with the software. We're going to use a piece software I wrote called temp_log. It is written in Elixir and it will read all your sensors, store the result in the database, provide an HTTP API to query the results and a small visualisation with graphs.
+
+So, first you have to install Elixir on Raspbian. You can use [my previously written guide](http://www.antonfagerberg.com/texts/elixir-on-raspberry-pi/) to do that.
+
+After that is done, you need to install git and postgresql.
+{% highlight text %}
+sudo apt-get install git postgresql
+{% endhighlight %}
+
+Git will be used to checkout temp_log from GitHub and postgresql is the database which we'll use.
+
+### Prepare the database
+Now we're ready to setup the database. First we need to use the client psql to add a user and the database. Use the following command to start the psql with the user postgres:
+
+{% highlight text %}
+sudo -u postgres psql
+{% endhighlight %}
+
+Now we should create the user and the database. I've used "temp_log" as the username, password and database name. Change them to whatever you want!
+
+{% highlight text %}
+CREATE USER temp_log WITH PASSWORD ‘temp_log';
+CREATE DATABASE temp_log OWNER temp_log;
+{% endhighlight %}
+
+To quit psql:
+
+{% highlight text %}
+\q
+{% endhighlight %}
+
+### Setup temp_log
+First we need to get the temp_log source code:
+
+{% highlight text %}
+git clone https://github.com/AntonFagerberg/temp_log.git
+{% endhighlight %}
+
+This first think we should edit is the file config/config.exs to the values we used in the previous step when we set-up the database. When this is done, we can migrate the database. It is important that the code for reading from the sensors won't be started when we do this so make sure that TempLog.Reader is commented out in the file lib/main.ex:
+
+{% highlight elixir %}
+children = [
+  worker(Repo, []),
+  #worker(TempLog.Reader, []),
+  worker(TempLog.HTTP, [])
+]
+{% endhighlight %}
+
+If it's commented out as above, go ahead and type the following commands:
+{% highlight text %}
+mix deps.get
+mix ecto.migrate -r Repo
+{% endhighlight %}
+
+This will fetch all required dependencies and migrate the database (create the appropriate tables).
+
+When this is done, go ahead and remove the comment above to enable TempLog.Reader. We're now ready to test the application. To start it in a interactive shell, type:
+
+{% highlight text %}
+iex -S mix
+{% endhighlight %}
+
+You should now see messages stating that sensor data was saved to the database.
