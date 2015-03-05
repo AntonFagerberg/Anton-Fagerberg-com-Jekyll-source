@@ -7,7 +7,7 @@ categories: projects
 To begin with, I did a clean install of [Raspbian based on Debian Wheezy](http://raspbian.org/). I'm running it without a graphical user interface, no overclocking but I have reduced the GPU memory to 16 megabytes.
 
 ## Hardware
-I won't describe how the sensors are put together because there are many guides already. I would recommend [this guide from adafruit](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf) which I've followed. I used two waterproof DS18B20 sensors connected in parallel with one 4.7kΩ resistor. 
+I won't describe how the sensors are put together because there are so many good guides already. I would recommend [this guide from adafruit](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf) which I've followed. I used two waterproof DS18B20 sensors connected in parallel with one 4.7kΩ resistor. 
 
 Note that there is one change which has to be made to Raspbian in order to read the sensor data which I'll describe below:
 
@@ -100,3 +100,47 @@ iex -S mix
 {% endhighlight %}
 
 You should now see messages stating that sensor data was saved to the database.
+
+VISA SENSOR DATA
+
+The data stored consists of three fields: sensor name (28-...), temperature in 1/1000 degrees celsius and the timestamp.
+
+### Web interface & API
+
+The application has a web interface and exposes some simple APIs. The file lib/api.ex is responsible for exposing the API end-points. It will also serve a simple web interface which calls the end-points and displays the results using [chartjs](http://www.chartjs.org/).
+
+The application is running on port 4000 by default. See below how to change it.
+
+#### Extending the API
+You can develop other end-points. Take a look in lib/query.ex to see how the database is queries and how the results are collected. The project uses [Ecto](https://github.com/elixir-lang/ecto) but I haven't used it's DSL.
+
+New end-points can be added in the file lib/api.ex. This file is also responsible for serving the template (html-file) stored in lib/templates/index.eex and the public files (main javascript & css) from the pub/ folder.
+
+### Settings
+#### Sensor precision
+My sensor has a precision of +-0.5 degrees celcius so that's what I convert my sensory data to in the graphs. If you want to change this behaviour, you can open the file pub/main.js and change the following function:
+
+{% highlight javascript %}
+function tempFormat(temps) {
+  return temps.map(function (temp) {
+    return (Math.round(2 * temp / 1000) / 2).toFixed(1);
+  });
+}
+{% endhighlight %}
+
+#### HTTP port
+Per default, the application the HTTP server on port 400. To change this, open the file lib/http_worker.ex and change the init-function to:
+
+{% highlight elixir %}
+Plug.Adapters.Cowboy.http TempLog.API, [], port: 4000
+{% endhighlight %}
+
+#### Read interval
+Per default, the application reads the temperature once every minute. To change this, modify the file lib/reader.ex and change the sleep timer:
+
+{% highlight elixir %}
+:timer.sleep(60_000) # Sleep 1 min before reading the next value.
+{% endhighlight %}
+
+#### Fake data
+You can fill the database with fake data if you want to develop another web-client. You can start populating the database with fake data from the iex shell by calling the method TempLog.FakeData.generate().
