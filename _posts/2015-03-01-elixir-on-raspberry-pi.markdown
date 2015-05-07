@@ -4,7 +4,7 @@
   categories: texts
 ---
 
-This is a tutorial of how to install Elixir on a Raspberry Pi using the distribution Raspbian.
+This is a tutorial of how to install Elixir (from source) on a Raspberry Pi using the distribution Raspbian.
 
 The first thing we need to do is to add the Erlang Solutions repository to our system. Open the file /etc/apt/sources.list with your favorite editor and add the following line to it:
 
@@ -29,7 +29,7 @@ sudo apt-get update
 
 After that has been done, we can begin install the needed packages:
 {% highlight text %}
-sudo apt-get install git erlang-mini erlang-eunit
+sudo apt-get install git erlang
 {% endhighlight %}
 
 Git is a version control system which we'll use for fetching Elixir. Erlang-mini is a tiny Erlang package for small devices (no GUI related dependencies and so on). Erlang-eunit is not really required to build Elixir itself but it will fail the unit-tests after the compilation is done which means that we can't know for sure that the system is working properly.

@@ -63,7 +63,7 @@ sudo -u postgres psql
 Now we should create the user and the database. I've used "temp_log" as the username, password and database name. Change them to whatever you want!
 
 {% highlight text %}
-CREATE USER temp_log WITH PASSWORD ‘temp_log';
+CREATE USER temp_log WITH PASSWORD 'temp_log';
 CREATE DATABASE temp_log OWNER temp_log;
 {% endhighlight %}
 
