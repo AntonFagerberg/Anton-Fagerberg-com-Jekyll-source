@@ -6,6 +6,7 @@
 
 This project is inspired by RSSDler ([code.google.com/p/rssdler](https://code.google.com/p/rssdler/)), but this project does not have as many features.
 The only thing this application does is that it downloads files linked in RSS (XML) feeds if the titles are matched against some regular expression.
+I've also [written a version in Elixir](https://github.com/AntonFagerberg/gimme).
 
 ### Example configuration
 {% highlight bash %}

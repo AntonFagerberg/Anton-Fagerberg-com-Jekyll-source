@@ -1,9 +1,0 @@
----
-  layout: category
-  title: "Work"
-  permalink: /work
-  categories: work
----
-
-Below is a collection containing some of the larger systems that I've designed and developed professionally over the years. 
-{{ content }}
