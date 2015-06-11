@@ -6,7 +6,7 @@ url: "http://www.antonfagerberg.com" # the base hostname & protocol for your sit
 twitter_username: antonfagerberg
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: /:categories/:title/
 highlighter: pygments
 

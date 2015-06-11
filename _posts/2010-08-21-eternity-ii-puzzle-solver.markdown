@@ -14,7 +14,7 @@ Not to discourage you but please consider:
  * The problem is NP-complete.
  * There is no built in save / resume, if your computer reboots, you have to start all over again.
 
-The built in pattern will place the pieces from the middle piece in a spiral pattern towards the edges. I have solved different "areas" of the puzzle which works but there is no guarantee that it can actually solve the entire thing - and if you change the pattern, the puzzle might not work if you do not place a start piece manually. I have double checked all the pieces with another person so they should be correct but again, no guarantee. Whenever the algorithm successfully places a new piece (or finds a new solution with atleast equally many pieces as the record) it will output the solution to the terminal and to a file. Be ware that the code is pretty bad and not optimized at all.
+The built in pattern will place the pieces from the middle piece in a spiral pattern towards the edges. I have solved different "areas" of the puzzle which works but there is no guarantee that it can actually solve the entire thing - and if you change the pattern in any way, the solution might not work. I have double checked all the pieces with another person so they should be correct but again, no guarantee. Whenever the algorithm successfully places a new piece (or finds a new solution with atleast equally many pieces as the record) it will output the solution to the terminal and to a file. Be ware that the code is pretty bad and not optimized at all.
 
 Wed Feb 01 22:42:26 CET 2012 - New Record or record variation!
 {% highlight bash %}

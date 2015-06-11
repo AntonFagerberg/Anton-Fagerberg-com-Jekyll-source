@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Temperature station with a Raspberry Pi"
+title: "Temperature station on a Raspberry Pi"
 categories: projects
 ---
 

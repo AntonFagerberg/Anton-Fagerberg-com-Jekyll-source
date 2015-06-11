@@ -43,6 +43,10 @@ Bencode.decode!("d5:hello5:worlde")
 %{"hello" => "world"}
 {% endhighlight %}
 
+You can also add it as a Mix dependency:
+
 {% highlight elixir %}
-{% github_sample /AntonFagerberg/elixir_bencode/blob/master/lib/bencode.ex %}
+defp deps do
+  [{:elixir_bencode, "~> 1.0.0"}]
+end
 {% endhighlight %}
