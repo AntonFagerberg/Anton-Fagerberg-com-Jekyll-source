@@ -5,6 +5,7 @@
   alias: experiments/eternity-ii-puzzle-solver/
 ---
 
+[Click to read about my new better solver!](/projects/eternity-2-solver/)
 
 Wikipedia article about the puzzle: [wikipedia.org/wiki/Eternity_II_puzzle](http://en.wikipedia.org/wiki/Eternity_II_puzzle)
 
